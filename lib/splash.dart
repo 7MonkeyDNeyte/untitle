@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-
 class Splash extends StatefulWidget {
   const Splash({super.key});
 
@@ -32,8 +31,11 @@ class LunchState extends State<Splash> {
   }
 
   route() {
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Splash())
-    );
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const Splash(),
+        ));
   }
 
   initScreen() {
