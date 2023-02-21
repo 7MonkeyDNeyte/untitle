@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../utils/size_config.dart';
 
-
 class OnBoardingContent extends StatelessWidget {
   const OnBoardingContent({
     super.key,

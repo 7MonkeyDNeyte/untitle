@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/size_config.dart';
 
-
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
     super.key,
