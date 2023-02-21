@@ -44,9 +44,9 @@ class LunchState extends State<Splash> {
       children: <Widget>[
         Container(
           decoration: const BoxDecoration(
-              color: Color(0xffffab40),
+              color: Color(0xFF30986A),
               gradient: LinearGradient(
-                  colors: [(Color(0xffffab40)), Color(0xffff9800)])),
+                  colors: [(Color(0xFF30986A)), Color.fromARGB(255, 32, 119, 80)])),
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
