@@ -15,8 +15,10 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
-    {"text": "Welcome to My health!", 
-    "image": "images/application_medicale.png",},
+    {
+      "text": "Welcome to My health!",
+      "image": "assets/application_medicale.png",
+    },
     {
       "text": "We help people connect with store \naround Republic of Congo",
       "image": "assets/hopital.png"

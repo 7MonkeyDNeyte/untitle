@@ -46,27 +46,29 @@ class LunchState extends State<Splash> {
       children: <Widget>[
         Container(
           decoration: const BoxDecoration(
-              color: Color(0xFF30986A),
-              gradient: LinearGradient(
-                  colors: [(Color(0xFF30986A)), Color.fromARGB(255, 32, 119, 80)])),
+              color: Color(0xFF0077B6),
+              gradient: LinearGradient(colors: [
+                (Color(0xFF0077B6)),
+                Color.fromARGB(255, 16, 111, 255)
+              ])),
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
-             SizedBox(
+            SizedBox(
               height: 150.0,
               width: 150.0,
             ),
-             Padding(padding: EdgeInsets.only(top: 20.0)),
-             Text(
+            Padding(padding: EdgeInsets.only(top: 20.0)),
+            Text(
               "My Health",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold),
             ),
-             Padding(padding: EdgeInsets.only(top: 20)),
-             CircularProgressIndicator(
+            Padding(padding: EdgeInsets.only(top: 20)),
+            CircularProgressIndicator(
               backgroundColor: Colors.white,
               strokeWidth: 1,
             )

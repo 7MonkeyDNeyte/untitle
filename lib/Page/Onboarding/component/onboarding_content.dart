@@ -16,10 +16,10 @@ class OnBoardingContent extends StatelessWidget {
       children: <Widget>[
         const Spacer(),
         Text(
-          "MarketZone",
+          "My Health",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
-            color: Colors.orange,
+            color: Colors.blue,
             fontWeight: FontWeight.bold,
           ),
         ),
