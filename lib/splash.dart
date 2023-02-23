@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
+import 'Page/Onboarding/onboarding.dart';
+
 class Splash extends StatefulWidget {
   const Splash({super.key});
 
@@ -34,7 +36,7 @@ class LunchState extends State<Splash> {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const Splash(),
+          builder: (context) => const onBoarding(),
         ));
   }
 
@@ -50,22 +52,21 @@ class LunchState extends State<Splash> {
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
+          children: const <Widget>[
+             SizedBox(
               height: 150.0,
               width: 150.0,
-              child: Image.asset("images/shopping.png"),
             ),
-            const Padding(padding: EdgeInsets.only(top: 20.0)),
-            const Text(
-              "MarketZone",
+             Padding(padding: EdgeInsets.only(top: 20.0)),
+             Text(
+              "My Health",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold),
             ),
-            const Padding(padding: EdgeInsets.only(top: 20)),
-            const CircularProgressIndicator(
+             Padding(padding: EdgeInsets.only(top: 20)),
+             CircularProgressIndicator(
               backgroundColor: Colors.white,
               strokeWidth: 1,
             )

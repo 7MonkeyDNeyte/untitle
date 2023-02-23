@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'size_config.dart';
 
-
-const kPrimaryColor = Color(0xFF30986A);
+const kPrimaryColor = Color(0xFF0077B6);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
-  begin: Alignment.topLeft,
-  end: Alignment.bottomRight,
-    colors: [Color(0xFF30986A), Color(0xFF196945),]
-);
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFF0077B6),
+      Color(0xFF90E0EF),
+    ]);
 const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
 
@@ -22,8 +23,7 @@ final headingSize = TextStyle(
 );
 
 //Form Error
-final RegExp emailValidatorRegExp =
-    RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+final RegExp emailValidatorRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 const String kEmailNullError = "Please Enter your email";
 const String kInvalidEmailError = "Please Enter valid Email";
 const String kPassNullError = "Please Enter your password";

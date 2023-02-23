@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/size_config.dart';
+import '../../home/acceuil.dart';
 import 'default_button.dart';
 import 'onboarding_content.dart';
 
@@ -14,14 +15,15 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
-    {"text": "Welcome to My health!", "image": "images/online_shopping.png"},
+    {"text": "Welcome to My health!", 
+    "image": "images/application_medicale.png",},
     {
       "text": "We help people connect with store \naround Republic of Congo",
-      "image": "images/online_shopping1.png"
+      "image": "assets/hopital.png"
     },
     {
       "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "images/online_shopping2.png"
+      "image": "assets/docteur.png"
     },
   ];
 
@@ -68,7 +70,8 @@ class _BodyState extends State<Body> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const homePage()));
+                                builder: (context) => AcceuilScreen(),
+                              ));
                         },
                       ),
                       const Spacer(),
