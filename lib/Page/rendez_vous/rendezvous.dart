@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
-class DocumentScreen extends StatelessWidget {
-  const DocumentScreen({super.key});
+class RendezvousScreen extends StatelessWidget {
+  const RendezvousScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("2"),
+        Text("1"),
         Icon(
-          IconlyLight.folder,
+          IconlyLight.calendar,
         )
       ],
     );
