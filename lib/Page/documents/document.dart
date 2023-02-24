@@ -8,7 +8,7 @@ class DocumentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         Text("2"),
         Icon(
           IconlyLight.folder,

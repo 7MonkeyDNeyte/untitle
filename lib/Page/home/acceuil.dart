@@ -8,7 +8,7 @@ class AcceuilScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         Text("0"),
         Icon(
           IconlyLight.home,

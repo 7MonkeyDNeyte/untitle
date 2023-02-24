@@ -8,7 +8,7 @@ class CompteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         Text("3"),
         Icon(
           IconlyLight.profile,
