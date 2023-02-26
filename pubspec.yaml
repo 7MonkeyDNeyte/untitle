@@ -39,6 +39,7 @@ dependencies:
   iconly: ^1.0.1
   zoom_tap_animation: ^1.1.0
   get: ^4.6.5
+  flutter_svg: ^2.0.2
   
 
 dev_dependencies:
