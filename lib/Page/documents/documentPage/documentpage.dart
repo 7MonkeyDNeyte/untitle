@@ -42,14 +42,14 @@ class _BodyState extends State<Body> {
       final result = await ImagePicker().pickImage(source: source);
       if (result == null) return;
       File? img = File(result.path);
-      img = await _cropImage(imageFile: img);
+      img = await _cropImage(img);
       setState(() => _image = img);
     } on PlatformException catch (e) {
       log('$e');
     }
   }
 
-  Future<File?> _cropImage({required File imageFile}) async {
+  Future<File?> _cropImage(File imageFile) async {
     CroppedFile? croppedImage =
         await ImageCropper().cropImage(sourcePath: imageFile.path);
     if (croppedImage == null) return null;
@@ -154,7 +154,7 @@ class _BodyState extends State<Body> {
                     picture_options(
                       icone: IconlyBroken.camera,
                       textLabel: 'Use Camera',
-                      onTap: () {},
+                      onTap: () => _pickerImage(ImageSource.camera),
                     ),
                   ],
                 ),
