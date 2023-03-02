@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/size_config.dart';
 import '../../documents/document.dart';
+import '../../documents/model/modelEnregDoc.dart';
 import 'default_button.dart';
 import 'onboarding_content.dart';
 
@@ -72,7 +73,7 @@ class _BodyState extends State<Body> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const DocumentScreen(),
+                                builder: (context) => const Enreg_Doc(),
                               ));
                         },
                       ),
