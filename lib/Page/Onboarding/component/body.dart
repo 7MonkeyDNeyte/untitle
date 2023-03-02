@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitle/Page/home/acceuil.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/size_config.dart';
+import '../../documents/document.dart';
 import 'default_button.dart';
 import 'onboarding_content.dart';
 
@@ -72,7 +72,7 @@ class _BodyState extends State<Body> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => AcceuilScreen(),
+                                builder: (context) => const DocumentScreen(),
                               ));
                         },
                       ),

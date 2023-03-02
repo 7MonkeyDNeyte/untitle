@@ -40,6 +40,11 @@ dependencies:
   zoom_tap_animation: ^1.1.0
   get: ^4.6.5
   flutter_svg: ^2.0.2
+  flutter_iconly: ^1.0.2
+  flutter_slidable: ^2.0.0
+  image_picker: ^0.8.6+1
+  image_cropper: ^3.0.1
+  animated_text_kit: ^4.2.2
   
 
 dev_dependencies:
@@ -68,6 +73,7 @@ flutter:
   assets:
       - assets/
       - assets/icon/
+      - assets/image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
