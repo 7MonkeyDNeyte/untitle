@@ -78,7 +78,7 @@ class _BodyState extends State<Body> {
                           SlidableAction(
                             backgroundColor: Colors.green,
                             icon: IconlyBroken.send,
-                            label: 'Share',
+                            label: 'Share ',
                             onPressed: (context) =>
                                 _onDismissed(index, Actions.share),
                           ),
