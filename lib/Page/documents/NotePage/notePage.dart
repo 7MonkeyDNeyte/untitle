@@ -1,16 +1,24 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitle/utils/constant.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:provider/provider.dart';
+import 'package:untitle/Page/documents/model/note.dart';
+import 'package:untitle/Page/documents/model/note_data.dart';
 
-import '../../component/defaultDocpage.dart';
+import '../../../utils/constant.dart';
+import 'editing_note_page.dart';
 
 class NotePage extends StatelessWidget {
   const NotePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Body(),
+    return ChangeNotifierProvider(
+      create: (context) => NoteData(),
+      builder: (context, child) => const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Body(),
+      ),
     );
   }
 }
@@ -23,91 +31,65 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  // create a new note
+  void createNewNote() {
+    // create a new id
+    int id = Provider.of<NoteData>(context, listen: false).getAllNotes().length;
+    // create a blank note
+    Note newNote = Note(
+      id: id,
+      titre: '',
+      text: '',
+    );
+// go to edit the note
+    goToNotePage(newNote, true);
+  }
 
-  final items = List<String>.generate(0, (i) => "Item ${i + 1}");
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: items.isEmpty
-          ? const emptyNote()
-          : ListView.builder(
-              itemCount: items.length,
-              itemBuilder: (context, index) {
-                final String item = items[index];
-                return Dismissible(
-                  key: Key(item),
-                  onDismissed: (DismissDirection dir) {
-                    setState(() {
-                      this.items.removeAt(index);
-                    });
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(dir == DismissDirection.endToStart
-                            ? '$item element effacé.'
-                            : '$item element liké'),
-                        action: SnackBarAction(
-                          label: 'Annuler',
-                          onPressed: () {
-                            setState(() {
-                              this.items.insert(index, item);
-                            });
-                          },
-                        ),
-                      ),
-                    );
-                  },
-                  background: Container(
-                    color: Colors.blue,
-                    alignment: Alignment.centerLeft,
-                    child: const Icon(IconlyBroken.send, color: Colors.white),
-                  ),
-                  secondaryBackground: Container(
-                    color: Colors.red,
-                    alignment: Alignment.centerRight,
-                    child: const Icon(
-                      IconlyBroken.delete,
-                      color: Colors.black,
-                    ),
-                  ),
-                  child: ListTile(
-                      title: Center(
-                    child: Text(items[index]),
-                  )),
-                );
-              },
-            ),
-      floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: kPrimaryColor,
-        onPressed: () {setState(() {
-            items.add('Item ');
-          });},
-        icon: const Icon(IconlyLight.paper),
-        label: const Text("Créer une note"),
-        elevation: 12,
+// go to note editing page
+  void goToNotePage(Note note, bool isNewNote) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => EditingNotePage(
+          note: note,
+          isNewNote: true,
+        ),
       ),
     );
   }
-}
 
-class emptyNote extends StatelessWidget {
-  const emptyNote({
-    super.key,
-  });
+  // delete note
+  void deleteNote(Note note) {
+    Provider.of<NoteData>(context, listen: false).deleteNote(note);
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          DefaultDocPage(
-            svgPicture: 'assets/image/pen_note.svg',
-            text1: "Créer des notes médicales",
-            text2:
-                "Ajoutez et gérez toutes vos notes pour garder la\n trace de vos informations de santé: Elles sont\nsécuriées grâce aux techniques de chiffrement\navancées.",
+    return Consumer<NoteData>(
+      builder: (context, value, child) => Scaffold(
+        backgroundColor: CupertinoColors.systemGroupedBackground,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CupertinoListSection.insetGrouped(
+                    children: List.generate(
+                  value.getAllNotes().length,
+                  (index) => CupertinoListTile(
+                    title: Text(value.getAllNotes()[index].titre),
+                  ),
+                ))
+              ],
+            ),
           ),
-        ],
+        ),
+        floatingActionButton: FloatingActionButton.extended(
+          backgroundColor: kPrimaryColor,
+          onPressed: createNewNote,
+          icon: const Icon(IconlyBroken.paperPlus),
+          label: const Text("Ajouter Note"),
+          elevation: 12,
+        ),
       ),
     );
   }

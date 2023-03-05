@@ -52,15 +52,26 @@ class _BodyState extends State<Body> {
                 SizedBox(),
                 Image.asset('assets/docteur.png'),
 
-                /// je ne sais quel type de Image je dois declarer
-                // Image.asset(' '), si ya plusieurs image
+                
                 SizedBox(
                   height: 10,
                 ),
 
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ElevatedButton(onPressed: () {}, child: Text('Continue')),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Continue'),
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ),
+                    ),
                     TextButton(
                       onPressed: () {},
                       child: Text('annuler'),

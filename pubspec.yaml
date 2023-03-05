@@ -45,6 +45,8 @@ dependencies:
   image_picker: ^0.8.6+1
   image_cropper: ^3.0.1
   animated_text_kit: ^4.2.2
+  provider:
+  flutter_quill: ^6.4.4
   
 
 dev_dependencies:

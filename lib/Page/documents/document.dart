@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconly/iconly.dart';
 import '../../utils/constant.dart';
 import 'NotePage/notePage.dart';
 import 'documentPage/documentpage.dart';
@@ -22,8 +21,8 @@ class DocumentScreen extends StatelessWidget {
           centerTitle: true,
         ),
         body: Column(
-          children: [
-            const TabBar(
+          children: const [
+            TabBar(
               dividerColor: Colors.blue,
               indicatorColor: kPrimaryColor,
               labelColor: kPrimaryColor,
@@ -44,7 +43,7 @@ class DocumentScreen extends StatelessWidget {
             ),
             Expanded(
               child: TabBarView(
-                  physics: const NeverScrollableScrollPhysics(),
+                  physics: NeverScrollableScrollPhysics(),
                   children: [
                     Doc_Page(),
                     NotePage(),

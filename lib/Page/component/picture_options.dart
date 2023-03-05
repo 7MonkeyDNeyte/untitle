@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../utils/constant.dart';
 
 class PicButton extends StatelessWidget {
   final String textLabel;

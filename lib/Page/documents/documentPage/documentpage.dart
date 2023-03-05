@@ -10,14 +10,14 @@ import 'package:image_picker/image_picker.dart';
 
 import '../../../utils/constant.dart';
 import '../../component/defaultDocpage.dart';
-import '../../component/picture_options.dart';
 import '../model/model.dart';
 
 class Doc_Page extends StatelessWidget {
+  const Doc_Page({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFBD0909),
+    return const Scaffold(
       body: Body(),
     );
   }
@@ -26,6 +26,8 @@ class Doc_Page extends StatelessWidget {
 enum Actions { share, delete, archive }
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   State<Body> createState() => _BodyState();
 }
@@ -139,7 +141,9 @@ class _BodyState extends State<Body> {
                     picture_options(
                       icone: IconlyBroken.image,
                       textLabel: 'Browse Gallery',
-                      onTap: () {},
+                      onTap: () {
+                        _pickerImage(ImageSource.gallery);
+                      },
                     ),
                     const SizedBox(
                       height: 10,
