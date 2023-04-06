@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:untitle/splash.dart';
-import 'package:untitle/utils/theme.dart';
+
+// Couleur principale du mode sombre
+const Color darkBlue = Color.fromARGB(255, 27, 42, 49);
+
+// Couleur secondaire du mode sombre
+const Color darkBlack = Color.fromARGB(255, 48, 48, 48);
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hy Heath',
-      theme: theme(),
+      theme: ThemeData(
+        // Definit le theme global de l'application
+        brightness: Brightness.light,
+      ),
       home: const Splash(),
     );
   }

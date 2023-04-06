@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:untitle/Page/documents/documentPage/documentpage.dart';
 
-import '../../../utils/constant.dart';
-import '../../component/defaultDocpage.dart';
+import '../../component/defaultdocpage.dart';
 
-class Rdv_passe extends StatelessWidget {
+class Rdv_Futur extends StatelessWidget {
+  const Rdv_Futur({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: kPrimaryColor,
+    return const Scaffold(
       body: Body(),
     );
   }
 }
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   State<Body> createState() => _BodyState();
 }
@@ -30,11 +32,9 @@ class _BodyState extends State<Body> {
           children: const [
             DefaultDocPage(
               svgPicture: 'assets/image/calendars.svg',
-              text1: "Aucun rendez-vous passé",
-              text2: '',
-            ),
-            SizedBox(
-              height: 35,
+              text1: "Aucun rendez-vous  à venir",
+              text2:
+                  "Trouvez un praticien et prenez rendez-vous en ligne à\ntout moment.",
             ),
           ],
         ),

@@ -32,3 +32,6 @@ const String kMatchPassError = "Passwords don't match";
 const String kNameNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "please Enter your address";
+
+//
+const transitionAnimate = 500;

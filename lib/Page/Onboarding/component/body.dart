@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:untitle/Page/login_up/Login/login.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/size_config.dart';
 import '../../documents/document.dart';
-import '../../documents/documentPage/ajout_document.dart';
+import '../../documents/documentPage/non_utilise_ajout_document.dart';
 import '../../documents/model/modelEnregDoc.dart';
+import '../../homebnb.dart';
 import 'default_button.dart';
 import 'onboarding_content.dart';
 
@@ -71,11 +73,12 @@ class _BodyState extends State<Body> {
                       DefaultButton(
                         text: "Continue",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const AjoutDoc(),
-                              ));
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const BottomNavBar(),
+                            ),
+                          );
                         },
                       ),
                       const Spacer(),

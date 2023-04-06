@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
-import 'package:untitle/Page/rendez_vous/rdv_a_venir/rdv_a_venir.dart';
-import 'package:untitle/Page/rendez_vous/rdv_passe/passe.dart';
+import 'package:untitle/Page/listerendez_vous/rdv_a_venir/rdv_a_venir.dart';
+import 'package:untitle/Page/listerendez_vous/rdv_passe/passe.dart';
 
 import '../../utils/constant.dart';
+import '../recherche/search_screen.dart';
 
 class RendezvousScreen extends StatelessWidget {
   const RendezvousScreen({super.key});
@@ -14,10 +16,14 @@ class RendezvousScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: kPrimaryColor,
-          title: const Text(
+          title: Text(
             'Mes rendez-vous',
-            style: TextStyle(color: Colors.white),
+            style: GoogleFonts.poppins(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           automaticallyImplyLeading: false,
           centerTitle: true,
@@ -55,7 +61,13 @@ class RendezvousScreen extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton.extended(
           icon: Icon(IconlyLight.search),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SearchScreen(),
+                ));
+          },
           label: const Text("Prendre rendez-vous"),
           elevation: 13,
         ),

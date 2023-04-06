@@ -25,7 +25,7 @@ class _AjoutDocState extends State<AjoutDoc> {
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
-            Annulation(context);
+            annulation(context);
           },
           icon: const Icon(Icons.close),
         ),
@@ -198,7 +198,7 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
-            Annulation(context);
+            annulation(context);
           },
           icon: const Icon(Icons.close),
         ),
@@ -238,7 +238,7 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
                           nameInputIsValid ? null : '*Le nom est obligatoire!',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.black)),
+                          borderSide: const BorderSide(color: Colors.black)),
                     ),
                     onChanged: (_) {
                       setState(() {});
@@ -280,8 +280,8 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
-                        child: Text(value),
                         alignment: Alignment.center,
+                        child: Text(value),
                       );
                     }).toList(),
                   ),
@@ -328,17 +328,16 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      DocumentScreen()),
+                                      const DocumentScreen()),
                               (Route<dynamic> route) => route.isFirst);
                         }
                       : null,
                   style: ElevatedButton.styleFrom(
-                    primary: isButtonEnabled()
+                    backgroundColor: isButtonEnabled()
                         ? kPrimaryColor
                         : Colors.grey.shade400,
                     minimumSize: Size(getProportionateScreenWidth(300), 50),
                     elevation: 10,
-                    backgroundColor: kPrimaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -357,7 +356,7 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
   }
 }
 
-Future<dynamic> Annulation(BuildContext context) {
+Future<dynamic> annulation(BuildContext context) {
   return showDialog(
     barrierDismissible: false,
     context: context,
@@ -383,10 +382,11 @@ Future<dynamic> Annulation(BuildContext context) {
               Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => DocumentScreen()),
+                      builder: (BuildContext context) =>
+                          const DocumentScreen()),
                   (Route<dynamic> route) => route.isFirst);
             },
-            child: Text('QUITTER'),
+            child: const Text('QUITTER'),
           ),
         ),
         Container(

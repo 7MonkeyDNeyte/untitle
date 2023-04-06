@@ -42,11 +42,14 @@ dependencies:
   flutter_svg: ^2.0.2
   flutter_iconly: ^1.0.2
   flutter_slidable: ^2.0.0
-  image_picker: ^0.8.6+1
+  image_picker: ^0.8.7
   image_cropper: ^3.0.1
   animated_text_kit: ^4.2.2
   provider:
   flutter_quill: ^6.4.4
+  multi_image_picker: ^4.8.0
+  google_fonts: ^4.0.3
+  shared_preferences: ^2.0.18
   
 
 dev_dependencies:
@@ -75,6 +78,7 @@ flutter:
   assets:
       - assets/
       - assets/image/
+      - assets/icon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

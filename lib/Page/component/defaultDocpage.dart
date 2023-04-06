@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/size_config.dart';
 
@@ -30,7 +31,7 @@ class DefaultDocPage extends StatelessWidget {
           ),
           Text(
             text1,
-            style: const TextStyle(
+            style: GoogleFonts.poppins(
               fontWeight: FontWeight.bold,
               fontSize: 19,
               color: Colors.black,
@@ -42,7 +43,7 @@ class DefaultDocPage extends StatelessWidget {
           Text(
             text2,
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: GoogleFonts.poppins(
               fontWeight: FontWeight.w400,
               fontSize: 14,
               color: Colors.black,
