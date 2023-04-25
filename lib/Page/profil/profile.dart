@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,6 +19,7 @@ class ProfilScreen extends StatefulWidget {
 class _ProfilScreenState extends State<ProfilScreen> {
   bool _switchvalue = false;
   bool _switchval = false;
+  bool connect = false;
 
   late Colors logoConColors;
   late IconData icone;
@@ -90,6 +89,49 @@ class _ProfilScreenState extends State<ProfilScreen> {
               const SizedBox(
                 height: 20,
               ),
+/////////////////////////////////////////////
+              Container(
+                width: getProportionateScreenWidth(330),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white),
+                child: ListTile(
+                  leading: Container(
+                    height: getProportionateScreenWidth(27),
+                    width: getProportionateScreenWidth(27),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.red,
+                    ),
+                    child: Icon(
+                      IconlyBroken.logout,
+                      color: Colors.white,
+                      size: getProportionateScreenWidth(20),
+                    ),
+                  ),
+                  title: Text(
+                    'Se Deconnecter',
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  trailing: Icon(
+                    IconlyBroken.arrow_right_2,
+                    color: Colors.grey[700],
+                  ),
+                  onTap: () {},
+                  hoverColor: Colors.grey,
+                  autofocus: false,
+                  enableFeedback: true,
+                  focusColor: Colors.blueGrey,
+                ),
+              ),
+              //////////////////////////////////////////
+              const SizedBox(
+                height: 20,
+              ),
+
               //////////////1er Container///////////////////////
               Container(
                 width: getProportionateScreenWidth(330),
@@ -167,6 +209,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   ],
                 ),
               ),
+              /////////////////////////////////
               const SizedBox(
                 height: 20,
               ),

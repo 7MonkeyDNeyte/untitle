@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitle/utils/size_config.dart';
 
 import 'Page/Onboarding/onboarding.dart';
+import 'Page/login_up/Logup/log_up.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -59,7 +60,8 @@ class LunchState extends State<Splash> with SingleTickerProviderStateMixin {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const onBoarding(),
+          // builder: (context) => const onBoarding(),
+          builder: (context) => const Logup_screen(),
         ));
   }
 

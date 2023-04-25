@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String text;
@@ -46,10 +47,10 @@ class ButtonWidget extends StatelessWidget {
           child: Align(
             child: Text(
               text,
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 foreground: Paint()..shader = textGradient,
                 fontWeight: FontWeight.bold,
-                fontSize: size.height * 0.02,
+                fontSize: size.height * 0.03,
               ),
             ),
           ),
