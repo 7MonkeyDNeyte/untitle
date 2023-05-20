@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:untitle/utils/constant.dart';
 import 'package:untitle/utils/size_config.dart';
 
 import '../Login/login.dart';
@@ -48,6 +49,7 @@ class _Logup_screenState extends State<Logup_screen> {
                         top: size.height * 0.02,
                       ),
                       child: Align(
+                        alignment: Alignment.center,
                         child: Column(
                           children: [
                             Text(
@@ -222,8 +224,9 @@ class _Logup_screenState extends State<Logup_screen> {
                         TextSpan(
                           text: "By creating an account, you agree to our ",
                           style: GoogleFonts.poppins(
-                            color: const Color(0xffADA4A5),
+                            color: Colors.grey[700],
                             fontSize: size.height * 0.015,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         WidgetSpan(
@@ -234,9 +237,10 @@ class _Logup_screenState extends State<Logup_screen> {
                             child: Text(
                               'Conditions of Use',
                               style: GoogleFonts.poppins(
-                                color: Colors.grey[500],
+                                color: kPrimaryColor,
                                 decoration: TextDecoration.underline,
                                 fontSize: size.height * 0.015,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
@@ -244,7 +248,7 @@ class _Logup_screenState extends State<Logup_screen> {
                         TextSpan(
                           text: ' and ',
                           style: GoogleFonts.poppins(
-                            color: Colors.grey[500],
+                            color: Colors.grey[700],
                             fontSize: size.height * 0.015,
                           ),
                         ),
@@ -261,9 +265,10 @@ class _Logup_screenState extends State<Logup_screen> {
                             child: Text(
                               "Privacy Notice",
                               style: GoogleFonts.poppins(
-                                color: const Color(0xffADA4A5),
+                                color: kPrimaryColor,
                                 decoration: TextDecoration.underline,
-                                fontSize: size.height * 0.015,
+                                fontSize: size.height * 0.016,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),

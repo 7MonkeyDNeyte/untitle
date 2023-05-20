@@ -7,10 +7,12 @@ import '../../utils/size_config.dart';
 import 'detail_practitien.dart';
 import 'search_screen.dart';
 
-class Resultat_Search extends StatelessWidget {
-  TextEditingController inputDate = TextEditingController();
+class ResultatSearch extends StatelessWidget {
+  final TextEditingController inputDate = TextEditingController();
 
-  TextEditingController inputHour = TextEditingController();
+  final TextEditingController inputHour = TextEditingController();
+
+  ResultatSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class Resultat_Search extends StatelessWidget {
         title: RichText(
           text: TextSpan(
             text: 'Resultat\n',
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: getProportionateScreenWidth(15),
             ),

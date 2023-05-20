@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'constant.dart';
 
 // Couleur pour le theme clair
 const Color kLightBackgroundColor = Colors.white;
@@ -12,11 +11,12 @@ final Color kDarkTextColor = Colors.grey;
 ThemeData theme(bool isDarkMode) {
   return ThemeData(
     // Couleur de fond et de text en fonction du theme selectionne
-    scaffoldBackgroundColor: isDarkMode ? kDarkBackgroundColor : kLightBackgroundColor,
+    scaffoldBackgroundColor:
+        isDarkMode ? kDarkBackgroundColor : kLightBackgroundColor,
     textTheme: isDarkMode ? _darkTextTheme() : _lightTextTheme(),
 
     // Definit le theme de l'app bar
-    appBarTheme: appBarTheme(isDarkMode),
+    // appBarTheme: appBarTheme(isDarkMode),
 
     // Definit la densite visuelle adaptative pour le theme
     visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -37,18 +37,18 @@ TextTheme _darkTextTheme() {
   );
 }
 
-AppBarTheme appBarTheme(bool isDarkMode) {
-  return AppBarTheme(
-    color: isDarkMode ? kDarkBackgroundColor : kLightBackgroundColor,
-    elevation: 0,
-    brightness: isDarkMode ? Brightness.dark : Brightness.light,
-    iconTheme: IconThemeData(
-      color: isDarkMode ? kDarkTextColor : kLightTextColor,
-    ),
-    textTheme: TextTheme(
-      headline6: TextStyle(
-        color: isDarkMode ? kDarkTextColor : kLightTextColor,
-      ),
-    ),
-  );
-}
+// AppBarTheme appBarTheme(bool isDarkMode) {
+//   return AppBarTheme(
+//     color: isDarkMode ? kDarkBackgroundColor : kLightBackgroundColor,
+//     elevation: 0,
+//     brightness: isDarkMode ? Brightness.dark : Brightness.light,
+//     iconTheme: IconThemeData(
+//       color: isDarkMode ? kDarkTextColor : kLightTextColor,
+//     ),
+//     textTheme: TextTheme(
+//       headline6: TextStyle(
+//         color: isDarkMode ? kDarkTextColor : kLightTextColor,
+//       ),
+//     ),
+//   );
+// }

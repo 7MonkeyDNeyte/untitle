@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitle/utils/constant.dart';
 import 'package:untitle/utils/size_config.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:iconly/iconly.dart';
 
-import '../login_up/Login/login.dart';
+// import '../login_up/Login/login.dart';
 import 'modifier_profil.dart';
 
 class ProfilScreen extends StatefulWidget {
@@ -17,8 +15,8 @@ class ProfilScreen extends StatefulWidget {
 }
 
 class _ProfilScreenState extends State<ProfilScreen> {
-  bool _switchvalue = false;
-  bool _switchval = false;
+  // final bool _switchvalue = false;
+  // final bool _switchval = false;
   bool connect = false;
 
   late Colors logoConColors;

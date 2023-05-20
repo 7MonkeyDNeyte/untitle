@@ -9,10 +9,10 @@ import '../../utils/constant.dart';
 import '../../utils/size_config.dart';
 import '../homebnb.dart';
 
-import 'package:intl/intl.dart';
+import 'package:intl/intl.dart' show DateFormat;
 
 class SearchScreen extends StatefulWidget {
-  SearchScreen({Key? key});
+  const SearchScreen({super.key});
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
@@ -273,7 +273,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Resultat_Search(),
+                        builder: (context) => ResultatSearch(),
                       ),
                     );
                   },

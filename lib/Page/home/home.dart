@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:untitle/utils/size_config.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 import '../../utils/constant.dart';
-import '../../utils/model.dart';
 
 import '../recherche/search_screen.dart';
 
@@ -60,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: getProportionateScreenWidth(10),
               ),
-              heading(typeSpecialist: typeSpecialist),
+              Heading(typeSpecialist: typeSpecialist),
               SizedBox(
                 height: getProportionateScreenWidth(25),
               ),
@@ -73,11 +71,11 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Categorie',
+                  const Text('Categorie',
                       style: TextStyle(color: Colors.black, fontSize: 16)),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'See All',
                       style: TextStyle(
                         fontSize: 16,
@@ -94,8 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class heading extends StatelessWidget {
-  const heading({
+class Heading extends StatelessWidget {
+  const Heading({
     super.key,
     required this.typeSpecialist,
   });
@@ -110,7 +108,7 @@ class heading extends StatelessWidget {
         RichText(
           text: TextSpan(
             text: 'Trouvez un\n',
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: getProportionateScreenWidth(18),
               fontWeight: FontWeight.w500,
@@ -157,7 +155,7 @@ class heading extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(IconlyLight.heart),
+                icon: const Icon(IconlyLight.heart),
               ),
             ],
           ),

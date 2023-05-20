@@ -22,7 +22,7 @@ class _SeeAllState extends State<SeeAll> {
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                    builder: (BuildContext context) => Resultat_Search()),
+                    builder: (BuildContext context) => ResultatSearch()),
                 (Route<dynamic> route) => route.isFirst);
           },
           color: Colors.black,

@@ -40,6 +40,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           });
         },
         currentIndex: newIndex,
+        type: BottomNavigationBarType.fixed,
         enableFeedback: true,
         elevation: 10,
         showSelectedLabels: false,

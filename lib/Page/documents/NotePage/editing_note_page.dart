@@ -6,9 +6,10 @@ import 'package:untitle/Page/documents/model/note_data.dart';
 import '../model/note.dart';
 
 class EditingNotePage extends StatefulWidget {
-  Note note;
-  bool isNewNote;
-  EditingNotePage({required this.note, required this.isNewNote});
+  final Note note;
+  final bool isNewNote;
+  const EditingNotePage(
+      {super.key, required this.note, required this.isNewNote});
 
   @override
   State<EditingNotePage> createState() => _EditingNotePageState();
@@ -88,12 +89,9 @@ class _EditingNotePageState extends State<EditingNotePage> {
               ),
               Flexible(
                 fit: FlexFit.loose,
-                child: Container(
-                  
-                  child: QuillEditor.basic(
-                    controller: _controller,
-                    readOnly: false,
-                  ),
+                child: QuillEditor.basic(
+                  controller: _controller,
+                  readOnly: false,
                 ),
               ),
             ],

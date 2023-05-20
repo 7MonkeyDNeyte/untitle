@@ -29,7 +29,7 @@ class SliderCard extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Text(label),
             ),
           ),

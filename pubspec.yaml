@@ -50,6 +50,9 @@ dependencies:
   multi_image_picker: ^4.8.0
   google_fonts: ^4.0.3
   shared_preferences: ^2.0.18
+  intl: ^0.18.0
+  
+  
   
 
 dev_dependencies:
