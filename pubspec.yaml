@@ -46,7 +46,7 @@ dependencies:
   image_cropper: ^3.0.1
   animated_text_kit: ^4.2.2
   provider:
-  flutter_quill: ^6.4.4
+  flutter_quill: ^7.1.18
   multi_image_picker: ^4.8.0
   google_fonts: ^4.0.3
   shared_preferences: ^2.0.18
