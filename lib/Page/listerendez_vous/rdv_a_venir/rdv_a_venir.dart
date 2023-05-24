@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitle/Page/documents/documentPage/documentpage.dart';
 
 import '../../component/defaultdocpage.dart';
 
@@ -24,12 +23,12 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             DefaultDocPage(
               svgPicture: 'assets/image/calendars.svg',
               text1: "Aucun rendez-vous  à venir",

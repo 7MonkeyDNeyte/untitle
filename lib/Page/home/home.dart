@@ -145,7 +145,7 @@ class Heading extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SearchScreen(),
+                        builder: (context) => const SearchScreen(),
                       ));
                 },
                 icon: const Icon(

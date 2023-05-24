@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:untitle/Page/Onboarding/component/default_button.dart';
 import 'package:untitle/utils/size_config.dart';
 
-import '../../../../utils/constant.dart';
-import '../login.dart';
 import 'Check.dart';
 
 class NewMail extends StatefulWidget {
@@ -121,7 +118,7 @@ class _NewMailState extends State<NewMail> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       elevation: 12,
-                      fixedSize: Size(200, 50),
+                      fixedSize: const Size(200, 50),
                       backgroundColor: Colors.blue,
                     ),
                     onPressed: () {

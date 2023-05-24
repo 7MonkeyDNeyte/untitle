@@ -5,7 +5,6 @@ import 'package:untitle/utils/constant.dart';
 import 'package:untitle/utils/size_config.dart';
 
 import '../Login/login.dart';
-import 'logup_btn.dart';
 
 class Logup_screen extends StatefulWidget {
   const Logup_screen({super.key});
@@ -289,7 +288,7 @@ class _Logup_screenState extends State<Logup_screen> {
               AnimatedPadding(
                 duration: const Duration(milliseconds: 500),
                 padding: EdgeInsets.only(top: size.height * 0.085),
-                child: Container(
+                child: SizedBox(
                   width: size.width * 0.9,
                   height: size.height * 0.06,
                   child: ElevatedButton(

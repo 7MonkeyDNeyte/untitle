@@ -5,8 +5,8 @@ const Color kLightBackgroundColor = Colors.white;
 const Color kLightTextColor = Colors.black;
 
 // Couleurs pour le theme sombre
-final Color kDarkBackgroundColor = Color(0xFF263238);
-final Color kDarkTextColor = Colors.grey;
+const Color kDarkBackgroundColor = Color(0xFF263238);
+const Color kDarkTextColor = Colors.grey;
 
 ThemeData theme(bool isDarkMode) {
   return ThemeData(
@@ -25,15 +25,15 @@ ThemeData theme(bool isDarkMode) {
 
 TextTheme _lightTextTheme() {
   return const TextTheme(
-    bodyText1: TextStyle(color: kLightTextColor),
-    bodyText2: TextStyle(color: kLightTextColor),
+    bodyLarge: TextStyle(color: kLightTextColor),
+    bodyMedium: TextStyle(color: kLightTextColor),
   );
 }
 
 TextTheme _darkTextTheme() {
-  return TextTheme(
-    bodyText1: TextStyle(color: kDarkTextColor),
-    bodyText2: TextStyle(color: kDarkTextColor),
+  return const TextTheme(
+    bodyLarge: TextStyle(color: kDarkTextColor),
+    bodyMedium: TextStyle(color: kDarkTextColor),
   );
 }
 

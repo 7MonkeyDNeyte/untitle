@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,7 +46,7 @@ class DocumentScreen extends StatelessWidget {
                 fontSize: 17,
                 fontWeight: FontWeight.bold,
               ),
-              tabs: [
+              tabs: const [
                 Tab(
                   child: Text("Document"),
                 ),
@@ -56,7 +55,7 @@ class DocumentScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Expanded(
+            const Expanded(
               child: TabBarView(
                   physics: NeverScrollableScrollPhysics(),
                   children: [

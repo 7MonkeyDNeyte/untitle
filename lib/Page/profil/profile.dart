@@ -361,7 +361,7 @@ class WidgetElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         menuModel(
@@ -390,7 +390,7 @@ class menuModel extends StatelessWidget {
         Icon(
           icon,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(
@@ -480,6 +480,6 @@ class Apparence extends StatefulWidget {
 class _ApparenceState extends State<Apparence> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

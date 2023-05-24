@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitle/Page/login_up/Login/login.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/size_config.dart';
-import '../../documents/document.dart';
-import '../../documents/documentPage/non_utilise_ajout_document.dart';
-import '../../documents/model/modelEnregDoc.dart';
 import '../../homebnb.dart';
 import 'default_button.dart';
 import 'onboarding_content.dart';

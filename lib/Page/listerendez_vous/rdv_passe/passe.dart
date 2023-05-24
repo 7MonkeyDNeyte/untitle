@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 
 import '../../../utils/constant.dart';
 import '../../component/defaultdocpage.dart';
 
 class Rdv_passe extends StatelessWidget {
+  const Rdv_passe({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: kPrimaryColor,
       body: Body(),
     );
@@ -15,6 +16,8 @@ class Rdv_passe extends StatelessWidget {
 }
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   State<Body> createState() => _BodyState();
 }
@@ -22,12 +25,12 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             DefaultDocPage(
               svgPicture: 'assets/image/calendars.svg',
               text1: "Aucun rendez-vous passé",

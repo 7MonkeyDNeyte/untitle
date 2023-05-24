@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/size_config.dart';
 
 class OnBoardingContent extends StatelessWidget {
@@ -26,7 +25,7 @@ class OnBoardingContent extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
           textAlign: TextAlign.center,
         ),
         const Spacer(

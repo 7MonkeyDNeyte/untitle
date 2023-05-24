@@ -151,7 +151,7 @@ class _ModifierProfilState extends State<ModifierProfil> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Text(
@@ -186,7 +186,7 @@ class _ModifierProfilState extends State<ModifierProfil> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ChangerNumero(),
+                        builder: (context) => const ChangerNumero(),
                       ),
                     );
                   },

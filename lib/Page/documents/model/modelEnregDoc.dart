@@ -6,7 +6,7 @@ class Enreg_Doc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Body();
+    return const Body();
   }
 }
 
@@ -29,31 +29,31 @@ class _BodyState extends State<Body> {
                 SizedBox(
                   height: getProportionateScreenWidth(50),
                 ),
-                Text(
+                const Text(
                   "Information",
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.black),
                 ),
-                Text(
+                const Text(
                   "Nom document",
                 ),
-                TextField(
+                const TextField(
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                       labelText: 'Nom du document',
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text("Description"),
-                TextField(
+                const Text("Description"),
+                const TextField(
                   keyboardType: TextInputType.multiline,
                 ),
-                SizedBox(),
+                const SizedBox(),
                 Image.asset('assets/docteur.png'),
 
                 
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
 
@@ -63,7 +63,6 @@ class _BodyState extends State<Body> {
                   children: [
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text('Continue'),
                       style: ButtonStyle(
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
@@ -71,10 +70,11 @@ class _BodyState extends State<Body> {
                           ),
                         ),
                       ),
+                      child: const Text('Continue'),
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: Text('annuler'),
+                      child: const Text('annuler'),
                     )
                   ],
                 )

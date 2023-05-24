@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -159,7 +158,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     fillColor: Colors.white,
                     hintText: 'Docteur, Specialiste, hopital...',
                     hintStyle: TextStyle(color: Colors.grey[800]),
-                    suffixIcon: Icon(Icons.medical_services_outlined),
+                    suffixIcon: const Icon(Icons.medical_services_outlined),
                     border: InputBorder.none,
                   ),
                 ),
@@ -181,7 +180,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     fillColor: Colors.white,
                     hintText: 'Selectionnez date',
                     hintStyle: TextStyle(color: Colors.grey[800]),
-                    suffixIcon: Icon(IconlyBroken.calendar),
+                    suffixIcon: const Icon(IconlyBroken.calendar),
                     border: InputBorder.none,
                   ),
                   onTap: () async {
@@ -194,7 +193,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       builder: (context, child) {
                         return Theme(
                           data: Theme.of(context).copyWith(
-                              colorScheme: ColorScheme.light(
+                              colorScheme: const ColorScheme.light(
                                   primary: kPrimaryColor,
                                   onPrimary: Colors.white,
                                   onSurface: Colors.black)),

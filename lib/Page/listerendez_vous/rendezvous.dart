@@ -28,9 +28,9 @@ class RendezvousScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
           centerTitle: true,
         ),
-        body: Column(
+        body: const Column(
           children: [
-            const TabBar(
+            TabBar(
               dividerColor: Colors.blue,
               indicatorColor: kPrimaryColor,
               labelColor: kPrimaryColor,
@@ -51,7 +51,7 @@ class RendezvousScreen extends StatelessWidget {
             ),
             Expanded(
               child: TabBarView(
-                  physics: const NeverScrollableScrollPhysics(),
+                  physics: NeverScrollableScrollPhysics(),
                   children: [
                     Rdv_Futur(),
                     Rdv_passe(),
@@ -60,12 +60,12 @@ class RendezvousScreen extends StatelessWidget {
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
-          icon: Icon(IconlyLight.search),
+          icon: const Icon(IconlyLight.search),
           onPressed: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SearchScreen(),
+                  builder: (context) => const SearchScreen(),
                 ));
           },
           label: const Text("Prendre rendez-vous"),

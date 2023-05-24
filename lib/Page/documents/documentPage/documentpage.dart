@@ -262,10 +262,10 @@ Future<dynamic> Annulation(BuildContext context) {
               Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => BottomNavBar()),
+                      builder: (BuildContext context) => const BottomNavBar()),
                   (Route<dynamic> route) => route.isFirst);
             },
-            child: Text('QUITTER'),
+            child: const Text('QUITTER'),
           ),
         ),
         Container(
@@ -376,7 +376,7 @@ class _AjoutDocState extends State<AjoutDoc> {
   List<File> images = [];
 
   int currentIndex = 0;
-  PageController _pageController = PageController(initialPage: 0);
+  final PageController _pageController = PageController(initialPage: 0);
 
   @override
   void initState() {
@@ -398,7 +398,7 @@ class _AjoutDocState extends State<AjoutDoc> {
         images.removeAt(currentIndex);
         currentIndex--;
         _pageController.animateToPage(currentIndex,
-            duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+            duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
       } else if (images.isNotEmpty) {
         images.removeAt(0);
       }
@@ -410,7 +410,7 @@ class _AjoutDocState extends State<AjoutDoc> {
       if (currentIndex < images.length - 1) {
         currentIndex++;
         _pageController.animateToPage(currentIndex,
-            duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+            duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
       }
     });
   }
@@ -420,7 +420,7 @@ class _AjoutDocState extends State<AjoutDoc> {
       if (currentIndex > 0) {
         currentIndex--;
         _pageController.animateToPage(currentIndex,
-            duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+            duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
       }
     });
   }
@@ -683,7 +683,7 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
                           nameInputIsValid ? null : '*Le nom est obligatoire!',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.black)),
+                          borderSide: const BorderSide(color: Colors.black)),
                     ),
                     onChanged: (value) {
                       setState(() {
@@ -727,8 +727,8 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
-                        child: Text(value),
                         alignment: Alignment.center,
+                        child: Text(value),
                       );
                     }).toList(),
                   ),
@@ -775,17 +775,16 @@ class _AjoutDoc2State extends State<AjoutDoc2> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      DocumentScreen()),
+                                      const DocumentScreen()),
                               (Route<dynamic> route) => route.isFirst);
                         }
                       : null,
                   style: ElevatedButton.styleFrom(
-                    primary: isButtonEnabled()
+                    backgroundColor: isButtonEnabled()
                         ? kPrimaryColor
                         : Colors.grey.shade400,
                     minimumSize: Size(getProportionateScreenWidth(300), 50),
                     elevation: 10,
-                    backgroundColor: kPrimaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),

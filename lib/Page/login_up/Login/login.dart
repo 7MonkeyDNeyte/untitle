@@ -5,10 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitle/Page/Onboarding/component/default_button.dart';
 import 'package:untitle/utils/size_config.dart';
 
-import '../../../utils/delayed_animation.dart';
 import '../../documents/document.dart';
 import '../Logup/log_up.dart';
-import '../Logup/logup.dart';
 import 'MdpForget/mdpforget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -38,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
       // Redirection vers la page d'accueil ou autre page de votre choix
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => DocumentScreen()),
+        MaterialPageRoute(builder: (context) => const DocumentScreen()),
       );
     } else {
       // Affichage d'un message d'erreur si les informations de connexion sont incorrectes

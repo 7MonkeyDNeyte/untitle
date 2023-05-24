@@ -23,11 +23,11 @@ class HelpCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           color: kPrimaryColor,
         ),
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
+            SizedBox(
               width: 150,
               child: Text(
                 text,

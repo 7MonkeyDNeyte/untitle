@@ -60,7 +60,6 @@ class _CheckMailState extends State<CheckMail> {
                     ),
                   );
                 },
-                child: Text("Reset Password"),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.blue,
                   fixedSize: const Size(180, 50),
@@ -68,6 +67,7 @@ class _CheckMailState extends State<CheckMail> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
+                child: const Text("Reset Password"),
               ),
               SizedBox(
                 height: getProportionateScreenWidth(25),
@@ -85,7 +85,7 @@ class _CheckMailState extends State<CheckMail> {
               Center(
                 child: Text.rich(
                   TextSpan(
-                    style: TextStyle(),
+                    style: const TextStyle(),
                     children: <TextSpan>[
                       TextSpan(
                         text:
@@ -97,7 +97,7 @@ class _CheckMailState extends State<CheckMail> {
                       ),
                       TextSpan(
                         text: 'send again',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.blue,
                         ),

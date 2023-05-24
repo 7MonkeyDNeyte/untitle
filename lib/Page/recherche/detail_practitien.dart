@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:untitle/Page/recherche/result_search_screen.dart';
@@ -68,7 +67,7 @@ class info_practicien extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: const Text('Prise de rendez-vous effectuée'),
-                      backgroundColor: Color.fromARGB(255, 40, 150, 206),
+                      backgroundColor: const Color.fromARGB(255, 40, 150, 206),
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(20),
@@ -135,10 +134,10 @@ class info_practicien extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 30,
                         ),
-                        Icon(Icons.add)
+                        const Icon(Icons.add)
                       ],
                     ),
                     /////////////////////////////////////////
@@ -280,11 +279,11 @@ class info_practicien extends StatelessWidget {
                             )
                           ],
                         ), ///////////////////
-                        SizedBox(
+                        const SizedBox(
                           width: 30,
                         ),
                         //////////////////////
-                        Icon(Icons.add),
+                        const Icon(Icons.add),
                         //////////////////////
                       ],
                     ),
@@ -308,7 +307,7 @@ class info_practicien extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
@@ -322,11 +321,11 @@ class info_practicien extends StatelessWidget {
                             )
                           ],
                         ), ///////////////////
-                        SizedBox(
+                        const SizedBox(
                           width: 30,
                         ),
                         //////////////////////
-                        Icon(Icons.add),
+                        const Icon(Icons.add),
                         //////////////////////
                       ],
                     ),
@@ -349,7 +348,7 @@ class info_practicien extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
@@ -363,11 +362,11 @@ class info_practicien extends StatelessWidget {
                             )
                           ],
                         ), ///////////////////
-                        SizedBox(
+                        const SizedBox(
                           width: 30,
                         ),
                         //////////////////////
-                        Icon(Icons.add),
+                        const Icon(Icons.add),
                         //////////////////////
                       ],
                     ),

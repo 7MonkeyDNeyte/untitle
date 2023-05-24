@@ -14,8 +14,8 @@ class _NewPasswordState extends State<NewPassword> {
   final _formfield = GlobalKey<FormState>();
   bool obscuretext = true;
   bool passToggle = true;
-  TextEditingController _passwordController = TextEditingController();
-  TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
 
   // Add these variables to hold error messages
   String passwordErrorText = '';
@@ -93,6 +93,7 @@ class _NewPasswordState extends State<NewPassword> {
                     } else if (value != _passwordController.text) {
                       return 'Passwords do not match';
                     }
+                    return null;
                   },
                   obscureText: obscuretext,
                   keyboardType: TextInputType.visiblePassword,
@@ -186,7 +187,7 @@ class _NewPasswordState extends State<NewPassword> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       elevation: 12,
-                      fixedSize: Size(200, 50),
+                      fixedSize: const Size(200, 50),
                       backgroundColor: Colors.blue,
                     ),
                     onPressed: () {

@@ -27,7 +27,7 @@ class ResultatSearch extends StatelessWidget {
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                    builder: (BuildContext context) => SearchScreen()),
+                    builder: (BuildContext context) => const SearchScreen()),
                 (Route<dynamic> route) => route.isFirst);
           },
           color: Colors.black,
@@ -94,7 +94,7 @@ class ResultatSearch extends StatelessWidget {
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => info_practicien(),
+                  builder: (context) => const info_practicien(),
                 ),
               ),
               child: Container(
@@ -125,7 +125,7 @@ class ResultatSearch extends StatelessWidget {
                             width: 70,
                             color: Colors.green,
                           ),
-                          Container(
+                          SizedBox(
                             height: 80,
                             width: getProportionateScreenWidth(200),
                             child: Column(

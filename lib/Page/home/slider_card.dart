@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../utils/size_config.dart';
 
 class SliderCard extends StatelessWidget {
   final String label;
