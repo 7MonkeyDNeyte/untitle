@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'size_config.dart';
 
+const kTextColor2 = Colors.white;
 const kPrimaryColor = Color.fromARGB(255, 0, 119, 182);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(

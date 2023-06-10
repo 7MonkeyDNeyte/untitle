@@ -6,6 +6,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 
 import '../../utils/constant.dart';
 
+import '../../utils/text_guide.dart';
 import '../recherche/search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -62,8 +63,55 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: getProportionateScreenWidth(25),
               ),
-              Container(
-                height: getProportionateScreenWidth(150),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 30, top: 20),
+                          child: Row(
+                            children: List.generate(textguide.length, (index) {
+                              return Padding(
+                                padding: const EdgeInsets.only(right: 25),
+                                child: GestureDetector(
+                                  onTap: () {},
+                                  child: Column(children: [
+                                    Container(
+                                      width: 180,
+                                      height: 180,
+                                      decoration: BoxDecoration(
+                                          gradient: kPrimaryGradientColor,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                                blurRadius: 10,
+                                                color: Colors.black,
+                                                offset: Offset(9, 10))
+                                          ]),
+                                      child: Center(
+                                        child: Text(
+                                          textguide[index],
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 15,
+                                              color: kPrimaryLightColor),
+                                        ),
+                                      ),
+                                    )
+                                  ]),
+                                ),
+                              );
+                            }),
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                ],
               ),
               SizedBox(
                 height: getProportionateScreenWidth(10),

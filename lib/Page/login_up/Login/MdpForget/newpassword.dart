@@ -15,7 +15,7 @@ class _NewPasswordState extends State<NewPassword> {
   bool obscuretext = true;
   bool passToggle = true;
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+  // final TextEditingController _confirmPasswordController = TextEditingController();
 
   // Add these variables to hold error messages
   String passwordErrorText = '';

@@ -49,7 +49,7 @@ dependencies:
   flutter_quill: ^7.1.18
   multi_image_picker: ^4.8.0
   google_fonts: ^4.0.3
-  shared_preferences: ^2.0.18
+  shared_preferences: ^2.1.2
   intl: ^0.18.0
   
   
