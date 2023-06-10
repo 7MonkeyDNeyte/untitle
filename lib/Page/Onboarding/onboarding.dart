@@ -18,16 +18,17 @@ class _OnBoardingState extends State<OnBoarding> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to My health!",
+      "text": "Bienvenue sur My health!",
       "image": "assets/application_medicale.png",
     },
     {
-      "text": "We help people connect with store \naround Republic of Congo",
+      "text":
+          "Trouvez facilement un centre de santé \nou un practicien \nen Republique du Congo",
       "image": "assets/hopital.png",
     },
     {
       "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/docteur.png",
+      "image": "assets/report.png",
     },
   ];
 
@@ -64,6 +65,7 @@ class _OnBoardingState extends State<OnBoarding> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context); // initialise la fonction SizeConfig
     return FutureBuilder<bool>(
       future: getPageVisited(),
       builder: (context, snapshot) {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/constant.dart';
-import '../../../utils/size_config.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
@@ -20,7 +19,7 @@ class DefaultButton extends StatelessWidget {
       height: 56,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-              elevation: 15,
+              elevation: 1,
               backgroundColor: kPrimaryColor,
               foregroundColor: Colors.white,
               shape: RoundedRectangleBorder(

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myhealth/utils/constant.dart';
 
 import 'Page/Onboarding/onboarding.dart';
+import 'utils/size_config.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -23,6 +24,7 @@ class LunchState extends State<Splash> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context); // initialise la fonction SizeConfig
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: initScreen(),
@@ -47,7 +49,7 @@ class LunchState extends State<Splash> with SingleTickerProviderStateMixin {
       child: Text(
         'MyHealth',
         style: GoogleFonts.poppins(
-          fontSize: 40,
+          fontSize: getProportionateScreenWidth(35),
           color: kTextColor2,
           fontWeight: FontWeight.bold,
         ),

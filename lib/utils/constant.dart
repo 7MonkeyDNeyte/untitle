@@ -3,7 +3,7 @@ import 'size_config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const kTextColor2 = Colors.white;
-const kPrimaryColor = Color.fromARGB(255, 0, 119, 182);
+const kPrimaryColor = Color(0xFF0077B6);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
     begin: Alignment.topLeft,

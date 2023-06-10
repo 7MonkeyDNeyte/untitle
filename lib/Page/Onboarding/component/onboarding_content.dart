@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/size_config.dart';
 
 class OnBoardingContent extends StatelessWidget {
@@ -12,12 +13,13 @@ class OnBoardingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Column(
       children: <Widget>[
         const Spacer(),
         Text(
           "My Health",
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontSize: getProportionateScreenWidth(36),
             color: Colors.blue,
             fontWeight: FontWeight.bold,
@@ -25,7 +27,7 @@ class OnBoardingContent extends StatelessWidget {
         ),
         Text(
           text,
-          style: const TextStyle(color: Colors.black),
+          style: GoogleFonts.poppins(color: Colors.black),
           textAlign: TextAlign.center,
         ),
         const Spacer(
