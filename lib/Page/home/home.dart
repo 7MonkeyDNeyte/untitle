@@ -72,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.only(
                           left: 30,
                           top: 20,
+                          bottom: 20,
                         ),
                         child: Row(
                           children: List.generate(textguide.length, (index) {

@@ -56,6 +56,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
