@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:untitle/utils/size_config.dart';
+import 'package:myhealth/utils/size_config.dart';
 
 import 'newpassword.dart';
 

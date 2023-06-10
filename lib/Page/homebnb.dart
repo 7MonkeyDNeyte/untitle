@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:untitle/utils/constant.dart';
 
+import '../utils/constant.dart';
 import 'documents/document.dart';
 import 'home/home.dart';
 import 'profil/profile.dart';

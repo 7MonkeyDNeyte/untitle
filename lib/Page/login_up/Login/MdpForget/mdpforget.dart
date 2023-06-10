@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:untitle/utils/size_config.dart';
+import 'package:myhealth/utils/size_config.dart';
 
 import 'Check.dart';
 

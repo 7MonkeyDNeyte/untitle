@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'size_config.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 const kTextColor2 = Colors.white;
 const kPrimaryColor = Color.fromARGB(255, 0, 119, 182);
@@ -36,3 +37,17 @@ const String kAddressNullError = "please Enter your address";
 
 //
 const transitionAnimate = 500;
+
+
+///////////////
+///
+/// 
+  Future<void> savePageVisited() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('onboardingVisited', true);
+  }
+
+  Future<bool> getPageVisited() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool('onboardingVisited') ?? false;
+  }

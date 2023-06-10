@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
-import 'package:untitle/utils/size_config.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 import '../../utils/constant.dart';
 
+import '../../utils/size_config.dart';
 import '../../utils/text_guide.dart';
 import '../recherche/search_screen.dart';
 
@@ -53,87 +53,101 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(
-                height: getProportionateScreenWidth(10),
-              ),
-              Heading(typeSpecialist: typeSpecialist),
-              SizedBox(
-                height: getProportionateScreenWidth(25),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 30, top: 20),
-                          child: Row(
-                            children: List.generate(textguide.length, (index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(right: 25),
-                                child: GestureDetector(
-                                  onTap: () {},
-                                  child: Column(children: [
-                                    Container(
-                                      width: 180,
-                                      height: 180,
-                                      decoration: BoxDecoration(
-                                          gradient: kPrimaryGradientColor,
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                                blurRadius: 10,
-                                                color: Colors.black,
-                                                offset: Offset(9, 10))
-                                          ]),
+        child: Column(
+          children: [
+            SizedBox(
+              height: getProportionateScreenWidth(10),
+            ),
+            Heading(typeSpecialist: typeSpecialist),
+            const SizedBox(),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          left: 30,
+                          top: 20,
+                        ),
+                        child: Row(
+                          children: List.generate(textguide.length, (index) {
+                            return Padding(
+                              padding: const EdgeInsets.only(right: 25),
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Column(children: [
+                                  Container(
+                                    width: 180,
+                                    height: 100,
+                                    decoration: BoxDecoration(
+                                        color: kPrimaryColor,
+                                        borderRadius: BorderRadius.circular(15),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                              blurRadius: 10,
+                                              color: Colors.grey,
+                                              offset: Offset(2, 4))
+                                        ]),
+                                    child: Container(
+                                      padding: const EdgeInsets.only(
+                                        left: 20,
+                                        top: 10,
+                                        bottom: 10,
+                                      ),
                                       child: Center(
                                         child: Text(
                                           textguide[index],
                                           style: GoogleFonts.poppins(
                                               fontSize: 15,
-                                              color: kPrimaryLightColor),
+                                              color: kPrimaryLightColor,
+                                              height: 1),
                                         ),
                                       ),
-                                    )
-                                  ]),
-                                ),
-                              );
-                            }),
-                          ),
+                                    ),
+                                  )
+                                ]),
+                              ),
+                            );
+                          }),
                         ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(
-                height: getProportionateScreenWidth(10),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('Categorie',
-                      style: TextStyle(color: Colors.black, fontSize: 16)),
-                  TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'See All',
-                      style: TextStyle(
-                        fontSize: 16,
                       ),
+                    )
+                  ],
+                )
+              ],
+            ),
+            SizedBox(
+              height: getProportionateScreenWidth(5),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Categorie',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontSize: 16,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'See All',
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
                     ),
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+            Column(
+              children: [],
+            )
+          ],
         ),
       ),
     );
@@ -158,20 +172,20 @@ class Heading extends StatelessWidget {
             text: 'Trouvez un\n',
             style: GoogleFonts.poppins(
               color: Colors.black,
-              fontSize: getProportionateScreenWidth(18),
+              fontSize: 15,
               fontWeight: FontWeight.w500,
             ),
             children: [
               WidgetSpan(
                   child: SizedBox(
-                width: getProportionateScreenWidth(200),
-                height: getProportionateScreenWidth(23),
+                width: 150,
+                height: 30,
                 child: AnimatedTextKit(
                   animatedTexts: [
                     for (String specialist in typeSpecialist)
                       FadeAnimatedText(
-                        textStyle: TextStyle(
-                            fontSize: getProportionateScreenWidth(19),
+                        textStyle: GoogleFonts.poppins(
+                            fontSize: 18,
                             color: Colors.black,
                             fontWeight: FontWeight.w600),
                         specialist,

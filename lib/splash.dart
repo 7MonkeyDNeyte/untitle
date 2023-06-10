@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitle/utils/constant.dart';
+import 'package:myhealth/utils/constant.dart';
 
 import 'Page/Onboarding/onboarding.dart';
 

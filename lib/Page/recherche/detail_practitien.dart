@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:untitle/Page/recherche/result_search_screen.dart';
-import 'package:untitle/utils/constant.dart';
-import 'package:untitle/utils/size_config.dart';
+import 'package:myhealth/Page/recherche/result_search_screen.dart';
+import 'package:myhealth/utils/constant.dart';
+import 'package:myhealth/utils/size_config.dart';
 
 class info_practicien extends StatelessWidget {
   const info_practicien({super.key});

@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:provider/provider.dart';
-import 'package:untitle/Page/documents/model/note.dart';
-import 'package:untitle/Page/documents/model/note_data.dart';
+import 'package:myhealth/Page/documents/model/note.dart';
+import 'package:myhealth/Page/documents/model/note_data.dart';
 
 import '../../../utils/constant.dart';
 import 'editing_note_page.dart';

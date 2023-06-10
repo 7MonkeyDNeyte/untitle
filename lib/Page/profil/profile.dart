@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitle/utils/constant.dart';
-import 'package:untitle/utils/size_config.dart';
+import 'package:myhealth/utils/constant.dart';
+import 'package:myhealth/utils/size_config.dart';
 import 'package:iconly/iconly.dart';
 
 // import '../login_up/Login/login.dart';

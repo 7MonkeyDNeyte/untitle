@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitle/splash.dart';
+import 'package:myhealth/splash.dart';
 
 // Couleur principale du mode sombre
 const Color darkBlue = Color.fromARGB(255, 27, 42, 49);

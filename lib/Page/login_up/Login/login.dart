@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitle/Page/Onboarding/component/default_button.dart';
-import 'package:untitle/utils/size_config.dart';
+import 'package:myhealth/Page/Onboarding/component/default_button.dart';
+import 'package:myhealth/utils/size_config.dart';
 
 import '../../documents/document.dart';
 import '../Logup/log_up.dart';
@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: EdgeInsets.only(
                       right: getProportionateScreenWidth(170),
                     ),
-                    child:  Text(
+                    child: Text(
                       ' Welcome Back',
                       style: GoogleFonts.poppins(
                         fontSize: 26,

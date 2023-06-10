@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:provider/provider.dart';
-import 'package:untitle/Page/documents/model/note_data.dart';
+import 'package:myhealth/Page/documents/model/note_data.dart';
 
 import '../model/note.dart';
 

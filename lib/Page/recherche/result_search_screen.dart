@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitle/Page/recherche/see_more_liste.dart';
+import 'package:myhealth/Page/recherche/see_more_liste.dart';
 
 import '../../utils/size_config.dart';
 import 'detail_practitien.dart';

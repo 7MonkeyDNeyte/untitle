@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
-import 'package:untitle/Page/listerendez_vous/rdv_a_venir/rdv_a_venir.dart';
-import 'package:untitle/Page/listerendez_vous/rdv_passe/passe.dart';
+import 'package:myhealth/Page/listerendez_vous/rdv_a_venir/rdv_a_venir.dart';
+import 'package:myhealth/Page/listerendez_vous/rdv_passe/passe.dart';
 
 import '../../utils/constant.dart';
 import '../recherche/search_screen.dart';

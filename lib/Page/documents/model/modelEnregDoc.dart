@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitle/utils/size_config.dart';
+import 'package:myhealth/utils/size_config.dart';
 
 class Enreg_Doc extends StatelessWidget {
   const Enreg_Doc({super.key});
@@ -51,12 +51,9 @@ class _BodyState extends State<Body> {
                 ),
                 const SizedBox(),
                 Image.asset('assets/docteur.png'),
-
-                
                 const SizedBox(
                   height: 10,
                 ),
-
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

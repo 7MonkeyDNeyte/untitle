@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:untitle/Page/recherche/result_search_screen.dart';
+import 'package:myhealth/Page/recherche/result_search_screen.dart';
 
 class SeeAll extends StatefulWidget {
   const SeeAll({super.key});
