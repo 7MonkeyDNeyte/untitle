@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hy Heath',
+      title: 'My Heath',
       theme: ThemeData(
         // Definit le theme global de l'application
         brightness: Brightness.light,

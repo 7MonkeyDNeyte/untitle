@@ -30,7 +30,7 @@ class LunchState extends State<Splash> with SingleTickerProviderStateMixin {
   }
 
   startTime() async {
-    var duration = const Duration(seconds: 4);
+    var duration = const Duration(seconds: 9);
     return Timer(duration, route);
   }
 

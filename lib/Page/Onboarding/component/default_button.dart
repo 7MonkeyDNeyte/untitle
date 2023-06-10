@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/size_config.dart';
 
@@ -15,8 +16,8 @@ class DefaultButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: getProportionateScreenHeight(56),
+      width: 200,
+      height: 56,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               elevation: 15,
@@ -27,7 +28,7 @@ class DefaultButton extends StatelessWidget {
           onPressed: press,
           child: Text(
             text,
-            style: TextStyle(fontSize: getProportionateScreenWidth(18)),
+            style: GoogleFonts.poppins(fontSize: 18),
           )),
     );
   }
