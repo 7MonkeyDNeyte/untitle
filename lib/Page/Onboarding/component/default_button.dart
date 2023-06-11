@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/constant.dart';
+import '../../../utils/size_config.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
@@ -27,7 +28,8 @@ class DefaultButton extends StatelessWidget {
           onPressed: press,
           child: Text(
             text,
-            style: GoogleFonts.poppins(fontSize: 18),
+            style:
+                GoogleFonts.poppins(fontSize: getProportionateScreenWidth(15)),
           )),
     );
   }
