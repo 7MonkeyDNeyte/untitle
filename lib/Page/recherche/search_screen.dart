@@ -8,7 +8,6 @@ import '../../utils/constant.dart';
 import '../../utils/size_config.dart';
 import '../homebnb.dart';
 
-
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
