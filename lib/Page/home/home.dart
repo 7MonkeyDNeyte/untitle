@@ -145,9 +145,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            Column(
-              children: [],
-            )
           ],
         ),
       ),
@@ -165,65 +162,153 @@ class Heading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
       children: [
-        RichText(
-          text: TextSpan(
-            text: 'Trouvez un\n',
-            style: GoogleFonts.poppins(
-              color: Colors.black,
-              fontSize: 15,
-              fontWeight: FontWeight.w500,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            RichText(
+              text: TextSpan(
+                text: 'Trouvez un\n',
+                style: GoogleFonts.poppins(
+                  color: Colors.black,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+                children: [
+                  WidgetSpan(
+                      child: SizedBox(
+                    width: 150,
+                    height: 30,
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        for (String specialist in typeSpecialist)
+                          FadeAnimatedText(
+                            textStyle: GoogleFonts.poppins(
+                                fontSize: 18,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600),
+                            specialist,
+                            duration: const Duration(seconds: 4),
+                          ),
+                      ],
+                      repeatForever: true,
+                    ),
+                  )),
+                ],
+              ),
             ),
-            children: [
-              WidgetSpan(
-                  child: SizedBox(
-                width: 150,
-                height: 30,
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    for (String specialist in typeSpecialist)
-                      FadeAnimatedText(
-                        textStyle: GoogleFonts.poppins(
-                            fontSize: 18,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600),
-                        specialist,
-                        duration: const Duration(seconds: 4),
-                      ),
-                  ],
-                  repeatForever: true,
-                ),
-              )),
-            ],
-          ),
-        ),
-        SizedBox(
-          width: 100,
-          child: Row(
-            children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const SearchScreen(),
-                      ));
-                },
-                icon: const Icon(
-                  IconlyBroken.search,
-                  color: kPrimaryColor,
-                ),
+            SizedBox(
+              width: 100,
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SearchScreen(),
+                          ));
+                    },
+                    icon: const Icon(
+                      IconlyBroken.search,
+                      color: kPrimaryColor,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(IconlyLight.heart),
+                  ),
+                ],
               ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(IconlyLight.heart),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
+    );
+  }
+}
+
+class Categories extends StatelessWidget {
+  const Categories({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    List<Map<String, dynamic>> categories = [
+      {"icon": "assets/icon/tooth.png", "texte": "Dentiste"},
+      {"icon": "assets/icon/eye.png", "texte": "Dentiste"},
+      {"icon": "assets/icon/chiropractic.png", "texte": "Dentiste"},
+      {"icon": "assets/icon/gynecologist.png", "texte": "Dentiste"},
+      {"icon": "assets/icon/pregnant.png", "texte": "Dentiste"},
+      {"icon": "assets/icon/lungs_.png", "texte": "Dentiste"},
+      {"icon": "assets/icon/testing.png", "texte": "Dentiste"},
+    ];
+    return SingleChildScrollView(
+      child: Padding(
+        padding:
+            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(5)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ...List.generate(
+              categories.length,
+              (index) => CategorieCard(
+                icon: categories[index]["icon"],
+                text: categories[index]["texte"],
+                press: () {},
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CategorieCard extends StatelessWidget {
+  const CategorieCard({
+    super.key,
+    required this.icon,
+    required this.text,
+    required this.press,
+  });
+
+  final String icon, text;
+  final GestureTapCallback press;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: press,
+      child: SizedBox(
+          width: getProportionateScreenWidth(55),
+          child: Column(
+            children: [
+              AspectRatio(
+                aspectRatio: 1,
+                child: Container(
+                  padding: EdgeInsets.all(
+                    getProportionateScreenWidth(15),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[100],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Image.asset(icon, fit: BoxFit.contain),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                text,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                    fontSize: getProportionateScreenWidth(10),
+                    fontWeight: FontWeight.w600),
+              ),
+            ],
+          )),
     );
   }
 }

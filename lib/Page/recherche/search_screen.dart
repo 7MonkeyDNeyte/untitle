@@ -8,7 +8,6 @@ import '../../utils/constant.dart';
 import '../../utils/size_config.dart';
 import '../homebnb.dart';
 
-import 'package:intl/intl.dart' show DateFormat;
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -96,7 +95,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 child: RichText(
                   text: TextSpan(
                     text: 'Trouvez un\n',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontSize: getProportionateScreenWidth(18),
                       fontWeight: FontWeight.w500,
@@ -167,96 +166,6 @@ class _SearchScreenState extends State<SearchScreen> {
               SizedBox(
                 height: getProportionateScreenWidth(20),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(10)),
-                child: TextField(
-                  controller: inputDate,
-                  minLines: 1,
-                  focusNode: FocusNode(canRequestFocus: false),
-                  autofocus: false,
-                  keyboardType: TextInputType.datetime,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    hintText: 'Selectionnez date',
-                    hintStyle: TextStyle(color: Colors.grey[800]),
-                    suffixIcon: const Icon(IconlyBroken.calendar),
-                    border: InputBorder.none,
-                  ),
-                  onTap: () async {
-                    FocusManager.instance.primaryFocus?.unfocus();
-                    DateTime? pickeddate = await showDatePicker(
-                      context: context,
-                      initialDate: DateTime.now(),
-                      firstDate: DateTime.now(),
-                      lastDate: DateTime(2100),
-                      builder: (context, child) {
-                        return Theme(
-                          data: Theme.of(context).copyWith(
-                              colorScheme: const ColorScheme.light(
-                                  primary: kPrimaryColor,
-                                  onPrimary: Colors.white,
-                                  onSurface: Colors.black)),
-                          child: child!,
-                        );
-                      },
-                    );
-                    if (pickeddate != null) {
-                      setState(() {
-                        inputDate.text =
-                            DateFormat("dd/MM/yyyy").format(pickeddate);
-                      });
-                    }
-                  },
-                ),
-              ),
-              SizedBox(
-                height: getProportionateScreenWidth(20),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(10)),
-                child: TextField(
-                  focusNode: FocusNode(canRequestFocus: false),
-                  controller: inputHour,
-                  minLines: 1,
-                  autofocus: false,
-                  keyboardType: TextInputType.datetime,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    hintText: 'Selectionnez l\'heure',
-                    hintStyle: TextStyle(color: Colors.grey[800]),
-                    suffixIcon: const Icon(IconlyBroken.timeCircle),
-                    border: InputBorder.none,
-                  ),
-                  onTap: () async {
-                    FocusManager.instance.primaryFocus?.unfocus();
-                    TimeOfDay? time = await showTimePicker(
-                      context: context,
-                      initialTime: TimeOfDay.now(),
-                      builder: (context, child) {
-                        return Theme(
-                          data: Theme.of(context).copyWith(
-                              colorScheme: const ColorScheme.light(
-                            primary: kPrimaryColor,
-                            onPrimary: Colors.white,
-                            onSurface: Colors.black,
-                            background: Colors.lightBlue,
-                          )),
-                          child: child!,
-                        );
-                      },
-                    );
-                    if (time != null) {
-                      setState(() {
-                        inputHour.text = time.format(context).toLowerCase();
-                      });
-                    }
-                  },
-                ),
-              ),
               SizedBox(
                 height: getProportionateScreenWidth(20),
               ),
@@ -265,7 +174,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     elevation: 15,
                     padding: EdgeInsets.symmetric(
                         horizontal: getProportionateScreenWidth(150),
-                        vertical: getProportionateScreenWidth(10)),
+                        vertical: getProportionateScreenWidth(20)),
                     backgroundColor: kPrimaryColor,
                     foregroundColor: Colors.white,
                   ),
